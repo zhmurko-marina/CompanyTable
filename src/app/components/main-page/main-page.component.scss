@@ -1,0 +1,133 @@
+.company-image {
+  width: 80px;
+  height: 45px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  margin: 15px;
+  &.fa-image:before{
+    font-family: FontAwesome;
+    color: #36b361;
+    font-size: 25px;
+  }
+}
+.table-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 70px 0;
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+  }
+  td {
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 10px;
+    &.company-image-td {
+      width: 140px;
+    }
+    &.action-td {
+      width: 100px;
+    }
+    .action-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    button {
+      background: transparent;
+      border: 0;
+    }
+    .fa-edit, .fa-trash {
+      &:before {
+        font-family: FontAwesome;
+        font-size: 21px;
+        color: #444;
+        transition: all .3s;
+      }
+      &:hover {
+        &:before {
+          color: #36b361;
+        }
+      }
+    }
+    .fa-edit {
+      &:hover {
+        &:before {
+          color: #36b361;
+        }
+      }
+    }
+    .fa-trash {
+      &:hover {
+        &:before {
+          color: #ca0505;
+        }
+      }
+    }
+  }
+  th {
+    text-align: left;
+    padding: 10px;
+    color: rgba(0,0,0,.54);
+    background: #fafaff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+.add-company-button-wrapper {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 50px;
+  .add-company-button {
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: #36b361;
+    color: #fff;
+    padding: 4px 14px;
+    border: 0;
+    font-family: Roboto, sans-serif;
+    margin-left: auto;
+    display: block;
+
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+  }
+}
+
+.add-company-wrapper {
+  padding: 50px 30px;
+  .form-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(217,213,230,0.5);
+    border-radius: 7px;
+    position: relative;
+  }
+  .close-button {
+    background: transparent;
+    border: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    .fa-times:before {
+      font-family: FontAwesome;
+      color: #ccc;
+      font-size: 22px;
+      transition: .3s;
+    }
+    &:hover {
+      .fa-times:before {
+        color: #ca0505;
+      }
+    }
+  }
+}

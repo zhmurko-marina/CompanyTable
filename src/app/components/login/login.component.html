@@ -1,0 +1,11 @@
+<div class="login-wrapper">
+  <div class="form-wrapper">
+    <h1>Login</h1>
+    <form class="form" name="form" (ngSubmit)="login()" novalidate>
+      <input class="form-control" placeholder="Login" type="text" name="login" required [(ngModel)]="form.email"/>
+      <input class="form-control" placeholder="Password" type="password" name="password" [(ngModel)]="form.password"
+             required autocomplete/>
+      <button class="submit-button" type="submit" aria-label="submit login form">Login</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.edit-page-wrapper {
+  padding: 70px 0;
+  .form-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 50px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(217,213,230,0.5);
+    border-radius: 7px;
+    .submit-button {
+      margin-top: 25px;
+    }
+    .cancel-link {
+      color: #36b361;
+      margin-left: 30px;
+    }
+  }
+}

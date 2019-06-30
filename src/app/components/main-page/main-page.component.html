@@ -1,0 +1,43 @@
+<div class="add-company-wrapper" *ngIf="showAddNewCompanyBlock">
+  <div class="form-wrapper">
+    <h1>Add new company</h1>
+    <button class="close-button" (click)="closeAddNewCompanyBlock()"><i class="fas fa-times"></i></button>
+    <form (ngSubmit)="createNewCompany()">
+      <input type="text" [(ngModel)]="form.companyName" name="companyName" placeholder="Enter company name">
+      <button type="submit" class="submit-button">Save</button>
+    </form>
+  </div>
+</div>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+    <tr>
+      <th>Company image</th>
+      <th>Company name</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let company of companiesService.data; let i = index;">
+      <td class="company-image-td">
+        <div *ngIf="company.CompanyData" [style.backgroundImage]="'url(' + company.CompanyData + ')'"
+             class="company-image"></div>
+        <div *ngIf="!company.CompanyData" class="company-image far fa-image"></div>
+      </td>
+      <td>{{company.CompanyName}}</td>
+      <td class="action-td">
+        <div class="action-wrapper">
+          <a [routerLink]="'/edit-page/' + company.CompanyIndex"><i class="far fa-edit"></i></a>
+          <button (click)="deleteCompany(company.CompanyIndex, i)"><i class="far fa-trash"></i></button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="add-company-button-wrapper">
+  <button class="add-company-button" (click)="toggleBlock()">+</button>
+</div>
+

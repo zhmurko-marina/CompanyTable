@@ -1,0 +1,16 @@
+<div class="edit-page-wrapper">
+  <div class="form-wrapper">
+    <h1>Edit page</h1>
+    <form class="form" name="form" (ngSubmit)="save()">
+      <input class="form-control" placeholder="Company name" type="text" name="companyName"
+             [(ngModel)]="form.companyName" required/>
+      <ngx-dropzone [accept]="'image/png,image/jpeg'" (filesAdded)="onFilesAdded($event)"
+                    [showPreviews]="true" [multiple]="false" [label]="'Drop your image here'"></ngx-dropzone>
+      <div class="button-wrapper">
+        <button type="submit" class="submit-button">Save</button>
+        <a [routerLink]="'/main-page'" class="cancel-link">Cancel</a>
+      </div>
+    </form>
+  </div>
+
+</div>
